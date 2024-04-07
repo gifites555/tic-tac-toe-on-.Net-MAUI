@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="final_work.MainPage"
+             >
+    <Grid>
+        <Image Source="my_piv.png" Aspect="AspectFill" Opacity="0.7" Margin="0,10,0,0" />
+        
+        <ScrollView>
+            <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+                <Label
+                Text="Welcome to the game"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label
+                Text="Please enter your username" FontAttributes="Bold"  FontSize="18"  HorizontalOptions="Center" />
+                
+                <Frame CornerRadius="2" BorderColor="Black" Padding="0" WidthRequest="200" HeightRequest="40"  >
+                    <Entry x:Name="FirstName" Placeholder="Name" FontSize="16" WidthRequest="200" HeightRequest="40" TextColor="Black"/>
+                </Frame>
+                <Frame CornerRadius="2" BorderColor="Black" Padding="0" WidthRequest="200" HeightRequest="40"  >
+                    <Entry x:Name="SecondName" Placeholder="Surname" FontSize="16" WidthRequest="200" HeightRequest="40"/>
+                </Frame>
+                
+                <Label
+                Text="Please indicate your birthday"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" FontAttributes="Bold" />
+
+            <DatePicker Date="{Binding DateOfBirth}"  HorizontalOptions="Center" />
+            <Label IsVisible="false" Text="{Binding DateOfBirthString}" x:Name="Birth"  />
+
+                
+           
+            
+            <Button
+                x:Name="CounterBtn"
+                Text="Enter values"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" Background="Black"/>
+
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+    </Grid>
+</ContentPage>

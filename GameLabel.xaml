@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"    
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="final_work.ContentPage1"
+             Title="">
+    
+    <ContentPage.MenuBarItems>
+
+
+        <MenuBarItem Text="•••">
+            <MenuFlyoutItem Text="Profile" Clicked="Profil"/>
+
+
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Quit" Clicked="Out"/>
+
+        </MenuBarItem>
+
+
+    </ContentPage.MenuBarItems>
+
+    <Grid>
+        <Image Source="my_piv.png" Aspect="AspectFill" Opacity="0.7" Margin="0,10,0,0" />
+        
+
+
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,20,0,0">
+        
+        <StackLayout>
+        <ImageButton  Source="robothuman.png"  WidthRequest="400" HeightRequest="150" x:Name="Computer" Clicked="Computer1" BorderColor="Black" BorderWidth="5"  CornerRadius="10" Margin="0,0,110,0" />
+            <Label
+               Text="Computer vs player" FontAttributes="Bold"  FontSize="18"  HorizontalOptions="Center" Margin="0,10,110,0" />
+        </StackLayout>
+        <StackLayout>
+        <ImageButton Source="humanhuman.png" WidthRequest="400" HeightRequest="150" x:Name="Player" Clicked="Player1" BorderColor="Black" BorderWidth="5"  CornerRadius="10" Margin="0,0,0,0" />
+            <Label
+               Text="Player vs player" FontAttributes="Bold"  FontSize="18"  HorizontalOptions="Center" Margin="10,10,0,0" />
+        </StackLayout>
+    </StackLayout>
+        </Grid>
+</ContentPage>
+
+
+

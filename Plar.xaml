@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"    
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="final_work.Plar"
+             Title="Player">
+
+
+    <ScrollView>
+        <VerticalStackLayout
+       Spacing="25"
+       Padding="30,0"
+       VerticalOptions="Center">
+            
+            <StackLayout Orientation="Horizontal" Spacing="3"   >
+                
+                
+                <Label  x:Name="First" FontSize="16" TextColor="Red"  />
+                <Label  x:Name="Second" FontSize="16" TextColor="Red" />
+
+                <Label x:Name="FirstNameSecond" FontSize="16" TextColor="Red"  HorizontalOptions="EndAndExpand" />
+                <Label x:Name="SecondNameSecond" FontSize="16" TextColor="Red"   />
+
+
+            </StackLayout>
+
+            <StackLayout Margin="0,150,0,0">
+                <Label x:Name="TurnLabel" Text="Player turn 1" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" />
+                <Grid x:Name="GameGrid" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Отображение игрового поля -->
+                    <Button x:Name="Cell00" Grid.Row="0" Grid.Column="0" Clicked="OnCellClicked" FontSize="Large" Background="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest = "100"  Margin="10"/>
+                    <Button x:Name="Cell01" Grid.Row="0" Grid.Column="1" Clicked="OnCellClicked" FontSize="Large" Background="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest = "100"  Margin="10"/>
+                    <Button x:Name="Cell02" Grid.Row="0" Grid.Column="2" Clicked="OnCellClicked" FontSize="Large" Background="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest = "100"  Margin="10"/>
+
+                    <Button x:Name="Cell10" Grid.Row="1" Grid.Column="0" Clicked="OnCellClicked" FontSize="Large" Background="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest = "100"  Margin="10"/>
+                    <Button x:Name="Cell11" Grid.Row="1" Grid.Column="1" Clicked="OnCellClicked" FontSize="Large" Background="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest = "100"  Margin="10"/>
+                    <Button x:Name="Cell12" Grid.Row="1" Grid.Column="2" Clicked="OnCellClicked" FontSize="Large" Background="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest = "100"  Margin="10"/>
+
+                    <Button x:Name="Cell20" Grid.Row="2" Grid.Column="0" Clicked="OnCellClicked" FontSize="Large" Background="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest = "100"  Margin="10"/>
+                    <Button x:Name="Cell21" Grid.Row="2" Grid.Column="1" Clicked="OnCellClicked" FontSize="Large" Background="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest = "100"  Margin="10"/>
+                    <Button x:Name="Cell22" Grid.Row="2" Grid.Column="2" Clicked="OnCellClicked" FontSize="Large" Background="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest = "100"  Margin="10"/>
+                </Grid>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10" >
+                    <Button x:Name="RestartButton" Text="Start again" Clicked="OnRestartClicked" HorizontalOptions="CenterAndExpand" Background="Black"/>
+
+                    <Button x:Name="BackButton" Text="Return to menu" Clicked="OnBackClicked"  Background="Black"  />
+                </StackLayout>
+
+                <Label x:Name="TimerLabel"  FontSize="16" HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                
+            </StackLayout>
+            
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
+
+

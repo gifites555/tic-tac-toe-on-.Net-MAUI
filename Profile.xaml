@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="final_work.Pro"
+             Title="">
+
+
+        <ContentPage.MenuBarItems>
+
+
+        <MenuBarItem Text="•••" >
+            <MenuFlyoutItem Text="Log out of your profile" Clicked="gooutProfil"/>
+
+
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Quit" Clicked="Out"/>
+
+        </MenuBarItem>
+
+
+        </ContentPage.MenuBarItems>
+
+
+    <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+        <Label Text="User information:" FontSize="18" HorizontalOptions="CenterAndExpand" Margin="0,20,0,10" FontAttributes="Bold"/>
+        <Label x:Name="FirstNameLabel" FontSize="16" HorizontalOptions="CenterAndExpand"/>
+        <Label x:Name="SecondNameLabel" FontSize="16" HorizontalOptions="CenterAndExpand"/>
+        <Label x:Name="BirthNameLabel" FontSize="16" HorizontalOptions="CenterAndExpand"/>
+
+        <Label x:Name="WinsNameLabel" FontSize="16" HorizontalOptions="CenterAndExpand"/>
+        <Label x:Name="LossesNameLabel" FontSize="16" HorizontalOptions="CenterAndExpand"/>
+        <Label x:Name="DrawsNameLabel" FontSize="16" HorizontalOptions="CenterAndExpand"/>
+        <Label x:Name="TotalGameTime1NameLabel" FontSize="16" HorizontalOptions="CenterAndExpand"/>
+    </VerticalStackLayout>
+
+
+
+</ContentPage>
